@@ -1,0 +1,25 @@
+{
+  "name": "nasa_podcast",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhu-ting/NASA_Podcast.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhu-ting/NASA_Podcast/issues"
+  },
+  "homepage": "https://github.com/zhu-ting/NASA_Podcast#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16",
+    "rss-parser": "^3.12.0"
+  }
+}
