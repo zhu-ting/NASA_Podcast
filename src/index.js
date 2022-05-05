@@ -10,7 +10,7 @@ let rss, asc, desc, displayItems
 
 const getNASAPodcast = async () => {
     rss = await getRSSFeed(link)
-    displayItems = rss.items.slice(0, 2).map(item => (
+    displayItems = rss.items.slice(0, 10).map(item => (
         {
             ...item,
             'publishedDate': convertISODateToAEST(item.isoDate)
