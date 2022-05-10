@@ -18,7 +18,7 @@ const getNASAPodcast = async () => {
     ))
 }
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
     getNASAPodcast()
 
     res.send(displayItems)
@@ -26,15 +26,15 @@ app.get('/', async (req, res) => {
 
 app.get('/sort', (req, res) => {
     getNASAPodcast()
-    asc = displayItems.sort((a, b) => (a.isoDate > b.isoDate) ? 1 : ((b.isoDate > a.isoDate) ? -1 : 0))
-    desc = displayItems.sort((a, b) => (a.isoDate > b.isoDate) ? -1 : ((b.isoDate < a.isoDate) ? 1 : 0))
-
+    
     // http://localhost:3000/sort?order=asc
     if (req.query.order === 'asc') {
+        asc = displayItems.sort((a, b) => (a.isoDate > b.isoDate) ? 1 : ((b.isoDate > a.isoDate) ? -1 : 0))
         res.send(asc)
     }
     //http://localhost:3000/sort?order=desc
     if (req.query.order === 'desc') {
+        desc = displayItems.sort((a, b) => (a.isoDate > b.isoDate) ? -1 : ((b.isoDate < a.isoDate) ? 1 : 0))
         res.send(desc)
     }
 })
